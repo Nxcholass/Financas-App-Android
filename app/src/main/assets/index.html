@@ -3,15 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Planilha de Gastos</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <title>Planilha de Gastos</title>
+    <link rel="stylesheet" href="CSS/styles.css">
+    <script defer src="JS/script.js"></script>
 </head>
 <body>
 <header>
-    <h1>Planilha de Gastos - Mirella - 2025</h1>
-</header>
+    <h1>Planilha de Gastos</h1>
+    <div id="sidebar" class="sidebar">
+        <button class="closebtn" onclick="toggleSidebar()">×</button>
+        <a href="jan-2025.html">Janeiro</a>
+        <a href="fev-2025.html">Fevereiro</a>
+        <a href="mar-2025.html">Março</a>
+        <a href="abr-2025.html">Abril</a>
+        <a href="mai-2025.html">Maio</a>
+        <a href="jun-2025.html">Junho</a>
+        <a href="jul-2025.html">Julho</a>
+        <a href="ago-2025.html">Agosto</a>
+        <a href="set-2025.html">Setembro</a>
+        <a href="out-2025.html">Outubro</a>
+        <a href="nov-2025.html">Novembro</a>
+        <a href="dez-2025.html">Dezembro</a>
 
+    </div>
+
+    <div id="main">
+        <button id="botao1" class="openbtn" onclick="toggleSidebar()">Selecione</button>
+    </div>
+</header>
 
 <main>
 
@@ -20,29 +39,10 @@
 
         <hr>
         <h4>A despesa que você está incluindo é a Despesa de:
-            <u><h3>Janeiro de 2025<h3></u>
+            <u><h3>Janeiro de 2025</h3></u>
             Se quiser, só clicar em selecionar abaixo e selecionar o mês que deseja inserir as Despesas</h4>
 
-        <div id="sidebar" class="sidebar">
-            <button class="closebtn" onclick="toggleSidebar()">×</button>
-            <a href="jan-2025.html">Janeiro</a>
-            <a href="fev-2025.html">Fevereiro</a>
-            <a href="mar-2025.html">Março</a>
-            <a href="abr-2025.html">Abril</a>
-            <a href="mai-2025.html">Maio</a>
-            <a href="jun-2025.html">Junho</a>
-            <a href="jul-2025.html">Julho</a>
-            <a href="ago-2025.html">Agosto</a>
-            <a href="set-2025.html">Setembro</a>
-            <a href="out-2025.html">Outubro</a>
-            <a href="nov-2025.html">Novembro</a>
-            <a href="dez-2025.html">Dezembro</a>
 
-        </div>
-
-        <div id="main">
-            <button id="botao1" class="openbtn" onclick="toggleSidebar()">Selecione</button>
-        </div>
 
 
         </ul>

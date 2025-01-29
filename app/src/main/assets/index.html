@@ -1,123 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planilha de Gastos</title>
-    <link rel="stylesheet" href="CSS/styles.css">
-    <script defer src="JS/script.js"></script>
+    <title>Página Inicial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #000;
+        }
+
+        @media (max-width: 1200px) {
+            body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url('IMG/celular1.png') center center/contain;
+            color: white;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .btn {
+            margin-top: 50px;
+            padding: 20px 30px;
+            font-size: 1rem;
+            color: black;
+            background: url('IMG/button.svg') no-repeat center center/contain;
+            background-color: transparent;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+       }
+    </style>
 </head>
 <body>
-<header>
-    <h1>Planilha de Gastos</h1>
-    <div id="sidebar" class="sidebar">
-        <button class="closebtn" onclick="toggleSidebar()">×</button>
-        <a href="jan-2025.html">Janeiro</a>
-        <a href="fev-2025.html">Fevereiro</a>
-        <a href="mar-2025.html">Março</a>
-        <a href="abr-2025.html">Abril</a>
-        <a href="mai-2025.html">Maio</a>
-        <a href="jun-2025.html">Junho</a>
-        <a href="jul-2025.html">Julho</a>
-        <a href="ago-2025.html">Agosto</a>
-        <a href="set-2025.html">Setembro</a>
-        <a href="out-2025.html">Outubro</a>
-        <a href="nov-2025.html">Novembro</a>
-        <a href="dez-2025.html">Dezembro</a>
 
-    </div>
+    <a href="login.html" style="margin-top: 250px; display: inline-block;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#ffffff" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+        </svg>
+    </a>
 
-    <div id="main">
-        <button id="botao1" class="openbtn" onclick="toggleSidebar()">Selecione</button>
-    </div>
-</header>
-
-<main>
-
-    <section class="form-section">
-        <h2>Adicionar Despesa</h2>
-
-        <hr>
-        <h4>A despesa que você está incluindo é a Despesa de:
-            <u><h3>Janeiro de 2025</h3></u>
-            Se quiser, só clicar em selecionar abaixo e selecionar o mês que deseja inserir as Despesas</h4>
-
-
-
-
-        </ul>
-        </nav>
-        </aside>
-
-        <hr>
-
-        <form id="expense-form">
-            <label for="expense-name">Nome da Despesa:</label>
-            <input type="text" id="expense-name" placeholder="Ex: Conta de luz" required>
-
-            <label for="expense-amount">Valor (R$):</label>
-            <input type="number" id="expense-amount" step="0.01" placeholder="Ex: 100.00" required>
-
-            <label for="expense-category">Categoria:</label>
-            <select id="expense-category">
-                <option value="alimentacao">Alimentação</option>
-                <option value="transporte">Transporte</option>
-                <option value="moradia">Moradia</option>
-                <option value="lazer">Lazer</option>
-                <option value="outros">Outros</option>
-            </select>
-
-            <label for="expense-date">Data:</label>
-            <input type="date" id="expense-date" required>
-
-            <button type="submit">Adicionar</button>
-        </form>
-    </section>
-
-    <section class="table-section">
-        <h2>Despesas</h2>
-        <table id="expense-table">
-            <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Valor (R$)</th>
-                <th>Categoria</th>
-                <th>Data</th>
-                <th>Ação</th>
-            </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-    </section>
-
-    <section class="summary-section">
-        <h2>Resumo</h2>
-        <div id="summary">
-            <p><strong>Total Geral:</strong> <span id="total-amount">0.00</span></p>
-            <p><strong>Total por Categoria:</strong></p>
-            <ul id="category-summary">
-                <!-- Resumo por categoria será adicionado aqui dinamicamente -->
-            </ul>
-            <p><strong>Data com Maior Gasto:</strong> <span id="highest-expense-date">-</span></p>
-            <p><strong>Categoria com Maior Gasto:</strong> <span id="highest-category">-</span></p>
-        </div>
-    </section>
-
-    <section class="tips-section">
-        <h2>Dicas para Economizar</h2>
-        <ul>
-            <li>Evite compras por impulso.</li>
-            <li>Planeje seu orçamento mensal.</li>
-            <li>Priorize gastos essenciais.</li>
-            <li>Compare preços antes de comprar.</li>
-        </ul>
-    </section>
-</main>
-
-
-<footer>
-    <p>&copy; 2025 Simulador de Planilha de Gastos | Desenvolvido por Você</p>
-</footer>
 </body>
 </html>

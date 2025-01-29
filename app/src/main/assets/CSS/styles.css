@@ -1,18 +1,19 @@
 /* Estilos Globais */
 body {
+    background: url('../IMG/tela2.png') center center/contain;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e697e4;
+    background-color: #0b02aa;
     color: #333;
     line-height: 1.6;
 }
 
 header {
-    background-color: purple;
     color: white;
     text-align: center;
     padding: 1rem;
+    opacity: 0.9;
 }
 
 h1 {
@@ -32,7 +33,6 @@ h2 {
     color: #333;
 }
 
-/* Formulário */
 .form-section {
     background: white;
     padding: 1.5rem;
@@ -56,23 +56,22 @@ input, select, button {
     font-size: 1rem;
 }
 
+button : a {
+    width: 50%;
+}
+
 button {
-    background-color: purple;
+    background-color: #74b1e3;
     color: white;
     border: none;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: purple;
-}
-
-/* Tabela */
 .table-section {
-    margin: 2rem auto; /* Centraliza horizontalmente com margin automático */
-    transform-origin: top center; /* Define o ponto de origem do redimensionamento */
-    overflow-x: auto; /* Adiciona rolagem horizontal se necessário */
-    box-sizing: border-box; /* Inclui margens e bordas no tamanho total */
+    margin: 2rem auto;
+    transform-origin: top center;
+    overflow-x: auto;
+    box-sizing: border-box;
 }
 
 table {
@@ -84,11 +83,11 @@ table {
 table th, table td {
     border: 1px solid #ddd;
     padding: 0.8rem;
-    text-align: left;
+    text-align: center;
 }
 
 table th {
-    background-color: purple;
+    background-color: #74b1e3;
     color: white;
 }
 
@@ -96,7 +95,6 @@ table tbody tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-/* Resumo */
 .summary-section {
     background: white;
     padding: 1.5rem;
@@ -118,69 +116,18 @@ table tbody tr:nth-child(even) {
     margin: 0.5rem 0;
 }
 
-/* Dicas */
-.tips-section {
-    background: #f4f4f4;
-    padding: 1.5rem;
-    border-radius: 5px;
-    margin-bottom: 2rem;
-}
 
-.tips-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.tips-section li {
-    margin-bottom: 0.5rem;
-}
-
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
-}
-
-header nav {
-    background-color: #e697e4;
-    padding: 1px;
-}
-
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-header nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Estilo do Sidebar */
 .sidebar {
-    height: 100%; /* Altura total da tela */
-    width: 0; /* Inicialmente fechado */
-    position: fixed; /* Fixa na lateral da tela */
-    z-index: 1; /* Sobrepõe outros elementos */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111; /* Cor de fundo */
-    overflow-x: hidden; /* Oculta conteúdo extra horizontal */
-    transition: 0.5s; /* Animação suave */
-    padding-top: 60px; /* Espaço no topo */
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
 
 .sidebar a {
@@ -192,53 +139,72 @@ header nav ul li a:hover {
     transition: 0.3s;
 }
 
-.sidebar a:hover {
-    color: #ffd700; /* Cor ao passar o mouse */
-}
-
 .sidebar .closebtn {
-    position: absolute;
-    top: 0;
-    right: 15px;
-    font-size: 24px;
-    margin-left: 50px;
-    color: #fff;
+    width: 40px;
+    background-color: #c9c9c9;
+    color: white;
+    border: 2px solid white;
+    transition: 0.3s;
 }
 
 .openbtn {
-    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #c9c9c9;
+    color: white;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+.user-icon {
     cursor: pointer;
-    background-color: #04aa6d; /* Cor do botão */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: url('../IMG/perfil2.jpg') no-repeat center center/cover;
+    border: 2px solid white;
+    top: 20px;
+    right: 20px;
+}
+
+.title {
+    width: 150px;
+    position: top;
+}
+
+#expense-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f8f8f8;
+}
+
+#expense-table th, #expense-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+#expense-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#expense-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+#expense-table tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+.delete-btn {
+    background-color: #f44336;
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-margin-top: 50px;
-    padding: 20px 30px;
-    font-size: 1rem;
-    color: black;
-    background: url('IMG/button.svg') no-repeat center center/contain;
-    background-color: transparent;
-    border: none;
-    border-radius: 5px;
+    padding: 5px 10px;
     cursor: pointer;
-    font-weight: bold;
-    transition: 0.3s;
+    border-radius: 5px;
 }
 
-.openbtn:hover {
-    background-color: #028a56; /* Cor ao passar o mouse */
-}
-
-/* Responsividade */
-@media screen and (max-height: 450px) {
-    .sidebar {
-        padding-top: 15px;
-    }
-    .sidebar a {
-        font-size: 16px;
-    }
+.delete-btn:hover {
+    background-color: #d32f2f; /* Cor de fundo do botão ao passar o mouse */
 }
